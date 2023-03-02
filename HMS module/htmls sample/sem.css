@@ -1,0 +1,22 @@
+body{
+    margin: 0;
+    
+}
+.container{
+
+    background-color: aqua;
+    margin: 10px;
+    padding: 10px;
+   
+}
+#header, nav{
+    margin: 10px;
+    min-height: 100px;
+    border: 2px solid red;
+    margin-bottom: 10px;
+    background-color: antiquewhite;
+    
+}
+nav{
+        min-height: 50px;
+}
