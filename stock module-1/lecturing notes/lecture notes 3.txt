@@ -1,0 +1,409 @@
+Topic
+    Arithmetic Operations
+        Addition
+        Subtraction
+        Multiplication
+        Division
+        Remainder
+        Exponent
+    How to find type using typeof
+    https://developer.mozilla.org/en-US/docs/Learn/Javascript/First_steps/Math
+    How to split string
+Arithmetic Operations 
+Addition +
+    Add the numbers on both sides of the operator
+    > 4 + 5
+    9
+    > 23 + 4
+    27
+Subtraction -
+    a - b => subtract b from a
+    > 56 - 2
+    54
+    > 23 - 543
+    -520
+    > 23.5 - 3.2
+    20.3
+Multiplication *
+    a * b => multiply a and b
+    > 3*2
+    6
+    > 45 * 30
+    1350
+Division /
+    a / b => divide a by b
+    > 45/9
+    5
+    > 45/7
+    6.428571428571429
+Remainder or Modulo %
+    a % b => Remainder obtained when a is divided by b
+    
+    6 % 3 => 
+    dividend = (divisor * quotient) + remainder
+    6 = (3 * 2) + 0
+    7 % 3 =>
+    7 = (3 * 2) + 1
+Exponent **
+    a ** b => a raised to the power of b
+Given the unit price of a product, number of units sold per day and the number of days in a month, compute the montly bill.
+Input
+1 line containing 3 integers separated by space
+1st integer will be the unit price
+2nd integer will be the number of units sold per day
+3rd integer will be the number of days in the month
+Output
+1 integer containing the total bill amount
+Example
+Input
+20 1 30
+Output
+600
+Problem Solving Steps
+1. Understand the problem statement - 
+2. Come up with new Test Cases - 
+3. Come up with the Logic - 
+4. Convert algo into code
+5. Dry Run
+6. Execution
+Test Cases
+1.
+input: 50 0 31
+output: 0
+2. 
+input: 220 4 30
+output: 26400
+3.
+input: 5 100 30
+output: 15000
+Logic
+1. Read the unit price, number of units sold per day, and number of days in a month.
+2. Compute the monthly bill by multiplying the unit price, the number of units sold per day, and the total number of days in the month.
+3. Display the computed monthly bill
+Arrays
+Arrays are 0-indexed.
+String split
+Split possible only on strings
+It can be done on any character which needs to be passed.
+Response will be an array of strings.
+str.split(<character>)
+typeof => tells the type of the data
+Collapse
+
+
+
+
+
+Shamanth Umesh [Operation team ,10x]
+  10:15 PM
+Tomorrow’s  schedule: 06-July [Wednesday]
+Lecture session : 6:30PM to 8:00PM
+Practice session: 8:00PM to 9:30 PM
+
+
+Shamanth Umesh [Operation team ,10x]
+  10:31 AM
+Today's  schedule: 06-July [Wednesday]
+Lecture session : 6:30PM to 8:00PM
+Practice session: 8:00PM to 9:30 PM
+
+
+Sai Kumar [Operations,10x]
+  6:16 PM
+Lecture  Session   : 6:30PM to 8:00PM
+Join Zoom Meeting
+https://us06web.zoom.us/j/83665415875?pwd=L3Y0ZHUvMEd6dEN4K2dNbXpMYkJPZz09
+Meeting Id:836 6541 5875
+Passcode:918030
+Join the zoom meeting from a laptop/desktop with a stable internet connection.
+It is mandatory to join the session using the Registered Email. Your attendance is being automatically recorded
+
+
+2 replies
+Last reply 14 hours agoView thread
+
+
+Shamanth Umesh [Operation team ,10x]
+  7:45 PM
+Practice  Session: 8:00PM to 9:30 PM
+Join Zoom Meeting
+https://us06web.zoom.us/j/86176362984?pwd=Wi83VS9sZ2x4bzU2eEs1VXl4VExjdz09
+Meeting ID:861 7636 2984
+Passcode: 370180
+Join the zoom meeting from a laptop/desktop with a stable internet connection.
+It is mandatory to join the session using the Registered Email. Your attendance is being automatically recorded
+:white_tick:
+1
+
+
+1 reply
+13 hours agoView thread
+
+
+Sai Kumar [Operations,10x]
+  8:00 PM
+Dear students
+        Please fill the feedback form for Arithmetic topic. Based upon this only we know the status of Lectures
+                 https://forms.gle/dgkbJbMzdVFmRcGNA
+Google DocsGoogle Docs
+The 10x Academy-Program Feedback-Arithmetic
+Kindly fill this feedback form. This is to understand the feedback regarding the topic "Arithmetic" concepts taught in our lectures. Feedback forms only take 5 minutes to fill and they are mandatory. Please fill the feedbacks on the same day they're posted. This will help us improve the learning experience for everyone in the cohort
+https://forms.gle/dgkbJbMzdVFmRcGNA
+
+
+
+Shamanth Umesh [Operation team ,10x]
+  8:00 PM
+Problem 1: ODD OR EVEN | Topic :  Loops and Control flow
+:white_tick:
+2
+
+
+
+
+
+
+9+
+73 replies
+Last reply 11 hours agoView thread
+
+
+Shamanth Umesh [Operation team ,10x]
+  8:15 PM
+Problem 2 : RATING CONTEST | Topic :  Loops and Control flow
+:white_tick:
+2
+
+
+
+
+
+
++9
+29 replies
+Last reply 9 hours agoView thread
+
+
+NISHANT ANAND
+  8:20 PM
+Lecture 4 Notes and Homework
+lecture4.txt 
+Topics for Today
+1. Comparison Operators
+2. Conditional Operators
+3. Logical Operators
+Travel Concession
+Given the age of the passenger, determine if s/he is eligible for travel discount.
+If the person is more than 60 years of age, s/he is eligible. Otherwise, not eligible.
+Input
+Single line having an integer as the age
+Output
+Eligible/Not Eligible
+Example
+Input:
+38
+Output:
+Not Eligible
+Problem Solving Steps
+1. Understand the problem statement -
+2. Come up with new Test Cases -
+3. Come up with the Logic - 
+4. Convert algo into code
+5. Dry Run
+6. Execution
+Test Cases
+1. 
+Input
+5
+Output:
+Not Eligible
+2.
+Input
+75
+Output
+Eligible
+3.
+Input:
+60
+Output:
+Not Eligible
+Logic
+1. Read the age. 
+2. Compare the age with 60 to see if it is greater.
+3. If greater, print Eligible.
+4. Otherwise, print Not Eligible. 
+Comparison Operators
+Syntax
+i/p:
+o/p: boolean (true/false)
+1. Less than <
+    a < b ==> true if a is lesser than b. Otherwise false
+    4 < 5 ==> true
+    5 < 4 ==> false
+    5 < 5 ==> false
+2. Less than or equal to <=
+    a <= b ==> true if a is lesser or equal to b. Otherwise false.
+    4 <= 5 ==> true
+    5 <= 4 ==> false
+    5 <= 5 ==> true
+3. Greater than >
+    a > b ==> true if a is greater than b. Otherwise false.
+    4 > 5 ==> false
+    5 > 4 ==> true
+    5 > 5 ==> false
+4. Greater than or equal to >=
+    a >= b ==> true if a is greater than or equal to b. Otherwise false
+    4 >= 5 ==> false
+    5 >= 4 ==> true 
+    5 >= 5 ==> true
+5. Equal ===
+    a === b ==> true if a is equal to b. Otherwise false
+    4 === 5 ==> false
+    5 === 5 ==> true
+    "Hello" === "Hello" ==> true
+    "Hello" === "Hi" ==> false
+    "Hello" === "hello" ==> false
+6. Not Equal !=
+    a != b ==> true if a is not equal to b. Otherwise false. 
+                reverse of equal.
+    4 != 5 ==> true
+    5 != 5 ==> false
+   "Hello" != "Hello" ==> false
+    "Hello" != "Hi" ==> true
+    "Hello" != "hello" ==> true  
+Conditional Operators
+if.. else
+Syntax:
+if(<condition>) {
+} else {
+}
+if(<condition1>) {
+    ...
+    ...
+    ...
+} else if (<condition2>) {
+    ...
+    ...
+    ...
+    ...
+} else {
+    ...
+    ..
+    ....
+}
+==============================================================
+Given the age and gender of the passenger, determine if s/he is eligible for travel discount.
+If the person is more than 60 years of age, s/he is eligible.
+Otherwise if the person is Female, she is eligible if she is greater than 58 years of age.
+Otherwise not eligible.
+Input
+2 lines
+<age> - integer
+<Gender> - String - Male/Female
+Output
+Eligible/Not Eligible
+Example
+75
+Male
+Output:
+Eligible
+Input:
+65
+Female
+Output:
+Eligible
+Problem Solving Steps
+1. Understand the problem statement -
+2. Come up with new Test Cases -
+3. Come up with the Logic -
+4. Convert algo into code
+5. Dry Run
+6. Execution
+Test Cases
+1.
+Input
+70
+Male
+Output:
+Eligible
+2.
+Input
+70
+Female
+Output:
+Eligible
+3. 
+Input
+60
+Male
+Output:
+Not Eligible
+4. 
+Input
+60
+Female
+Output:
+Eligible
+Logic
+1. Read the age and gender. 
+2. Compare the age with 60. 
+3. If the age is greater than 60, print eligible. 
+4. If the age is lower, compare the age with 58 and gender with Female. 
+5. If the age is greater than 58 and gender is female, print Eligible. 
+6. Otherwise print Not Eligible;
+Logical Operators
+i/p: boolean
+o/p: boolean
+1. AND &&
+    <condition1> && <condition2> ==> true if both conditions are true. Otherwise false;
+    true && true ==> true
+    true && false ==> false
+    false && true ==> false 
+    false && false ==> false
+2. OR ||
+    <condition1> || <condition2> ==> true if at least one of the 2 conditions are true. Otherwise false;
+    true || true ==> true
+    true || false ==> true
+    false || true ==> true
+    false || false ==> false
+Example: 
+5<6 && 6<7
+================================================================
+Homework
+Perform the dry run for the same test cases for the following code. 
+let age = parseInt(readLine());
+let gender = readLine();
+if(age > 60) {
+    console.log("Eligible");
+} 
+if (age > 58 && gender === "Female") {
+    console.log("Eligible");
+} else {
+    console.log("Not Eligible");
+}
+Collapse
+
+
+
+:raised_hands:
+1
+
+white_tick
+eyes
+raised_hands
+
+
+
+
+
+8:24
+https://drive.google.com/drive/folders/1rAw3xVovmMtE4wvXcP7N8_2s7a8XYgiy
+8:24
+I have added it as a Bookmark on the channel
+
+
+
+
+
+
+

@@ -1,0 +1,95 @@
+Break
+    What is does
+    Syntax
+    Control Flow 
+Given a query integer and a list of integers, check whether the query integer is present in the list or not. 
+// Linear Search 
+Input:
+<query integer>
+<size of the list - n>
+<n lines, each having 1 integer which is a part of the list>
+Output:
+Present (If the query int is present in the list)
+Not Present
+Example
+Input:
+78
+5
+1
+2
+45
+78
+98
+Output:
+Present
+Problem Solving Steps
+1. Understand the problem statement - 
+2. Come up with new Test Cases -
+3. Come up with the Logic - 
+4. Convert algo into code
+5. Dry Run
+6. Execution
+Test Cases
+1. 
+Input
+-5
+3
+1
+2
+3
+Output: 
+Not Present
+2. 
+Input
+-5
+3
+-3
+-4
+-5
+Output:
+Present
+3.
+Input
+-5
+0
+Output: Not Present
+4. 
+Input
+-5
+3
+-5
+2
+1
+Output: Present
+Logic
+1. Read the query integer.
+2. Read the size of the list.
+3. Maintain an initial response of Not Present.
+4. Read one element and compare it to the query.
+5. If it matches, print "Present" and end.
+6. If not, repeat steps 3-5 for every element.
+Break
+What?
+Helps you break out of the current loop. 
+Syntax
+break;
+Control Flows
+...
+..
+...
+for( ; ; )  {
+    ...
+    ...
+    if (condition1) {
+        break;
+    }
+    ...
+    ...
+    ...
+}
+while() {
+    ..
+    ...
+    ...
+    break;
+}

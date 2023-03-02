@@ -1,0 +1,42 @@
+Appu gowda H C	Did not attempt	02-Nov-21	Add Subtract	https://6793fdf6.widgets.sphere-engine.com/lp?hash=qPsvnwWqob
+Appu gowda H C	Did not attempt	30-Oct-21	Alternate sort	https://6793fdf6.widgets.sphere-engine.com/lp?hash=EX13gAGYgW
+Appu gowda H C	Did not attempt	2-Nov-21	Balanced Parentheses	https://6793fdf6.widgets.sphere-engine.com/lp?hash=K8FYE8luE5
+Appu gowda H C	Incorrect	10-Nov-21	Beautiful String	https://6793fdf6.widgets.sphere-engine.com/lp?hash=QKJvPIbdmN
+Appu gowda H C	Did not attempt	17-Nov-21	Cheap Thrills	https://6793fdf6.widgets.sphere-engine.com/lp?hash=GHQKf4cIB2
+Appu gowda H C	Did not attempt	11-Nov-21	Chocolate Bars	https://6793fdf6.widgets.sphere-engine.com/lp?hash=WWSnmveO63
+Appu gowda H C	Did not attempt	13-Nov-21	Code Words	https://6793fdf6.widgets.sphere-engine.com/lp?hash=vd1i5NqBze
+Appu gowda H C	Did not attempt	13-Nov-21	Common Alphabets	https://6793fdf6.widgets.sphere-engine.com/lp?hash=Z3caeX9JyF
+Appu gowda H C	Did not attempt	16-Nov-21	Compare Versions	https://6793fdf6.widgets.sphere-engine.com/lp?hash=SkQJtTKr12
+Appu gowda H C	Incorrect	16-Nov-21	Compress_String	https://6793fdf6.widgets.sphere-engine.com/lp?hash=xgtur8afvC
+Appu gowda H C	Did not attempt	11-Nov-21	Counting Stars	https://6793fdf6.widgets.sphere-engine.com/lp?hash=6lc9sEuBgo
+Appu gowda H C	Did not attempt	13-Nov-21	Dictionary String	https://6793fdf6.widgets.sphere-engine.com/lp?hash=y4PGoYdKQJ
+Appu gowda H C	Did not attempt	3-Nov-21	Distance covering	https://6793fdf6.widgets.sphere-engine.com/lp?hash=iup13En2a1
+Appu gowda H C	Did not attempt	30-Oct-21	Factorial_Iterative	https://6793fdf6.widgets.sphere-engine.com/lp?hash=VhDHd7YxsG
+Appu gowda H C	Did not attempt	30-Oct-21	GCD_Iterative	#N/A
+Appu gowda H C	Incorrect	16-Nov-21	Game of Strength	https://6793fdf6.widgets.sphere-engine.com/lp?hash=LXoJQ4l42x
+Appu gowda H C	Did not attempt	03-Nov-21	Hack Money	https://6793fdf6.widgets.sphere-engine.com/lp?hash=jQKL4jIkk5
+Appu gowda H C	Did not attempt	30-Oct-21	Handle Strings	https://6793fdf6.widgets.sphere-engine.com/lp?hash=sQIhCWiFyq
+Appu gowda H C	Partially solved	18-Nov-21	Horse Overtakes	https://6793fdf6.widgets.sphere-engine.com/lp?hash=hGambFsYTS
+Appu gowda H C	Did not attempt	06-Nov-21	Jumping game	https://6793fdf6.widgets.sphere-engine.com/lp?hash=LQkpO5cnlI
+Appu gowda H C	Did not attempt	18-Nov-21	Missing Soldiers	https://6793fdf6.widgets.sphere-engine.com/lp?hash=SK0EJXeNX4
+Appu gowda H C	Partially solved	14-Nov-21	Modified Palindrome	https://6793fdf6.widgets.sphere-engine.com/lp?hash=T7sk7wQLwC
+Appu gowda H C	Did not attempt	6-Nov-21	Neighbours	https://6793fdf6.widgets.sphere-engine.com/lp?hash=BkFkLMNKbj
+Appu gowda H C	Incorrect	18-Nov-21	Pros Cons	https://6793fdf6.widgets.sphere-engine.com/lp?hash=ayR2mdOfaa
+Appu gowda H C	Did not attempt	11-Nov-21	Recurring Names	https://6793fdf6.widgets.sphere-engine.com/lp?hash=0yY1RlllWY
+Appu gowda H C	Did not attempt	3-Nov-21	Recursive Multiply	https://6793fdf6.widgets.sphere-engine.com/lp?hash=W1LgOYh9CQ
+Appu gowda H C	Partially solved	6-Nov-21	Recursive Print	https://6793fdf6.widgets.sphere-engine.com/lp?hash=bYQ50gFcBe
+Appu gowda H C	Incorrect	3-Nov-21	Recursive Series	https://6793fdf6.widgets.sphere-engine.com/lp?hash=eGkJmF3zDt
+Appu gowda H C	Did not attempt	31-Oct-21	Red or Green	https://6793fdf6.widgets.sphere-engine.com/lp?hash=8ioAXOSV71
+Appu gowda H C	Did not attempt	31-Oct-21	Reduce it	https://6793fdf6.widgets.sphere-engine.com/lp?hash=vvI591nx1s
+Appu gowda H C	Did not attempt	03-Nov-21	Repeated target SUM	https://6793fdf6.widgets.sphere-engine.com/lp?hash=xRmpnQWTft
+Appu gowda H C	Did not attempt	03-Nov-21	Reverse String_Recursive	https://6793fdf6.widgets.sphere-engine.com/lp?hash=FpdLX7HHH4
+Appu gowda H C	Partially solved	17-Nov-21	Scoring Exam	https://6793fdf6.widgets.sphere-engine.com/lp?hash=m0OU6HNivY
+Appu gowda H C	Did not attempt	16-Nov-21	Sequences	https://6793fdf6.widgets.sphere-engine.com/lp?hash=MndCjmhD3x
+Appu gowda H C	Did not attempt	31-Oct-21	Series-9	https://6793fdf6.widgets.sphere-engine.com/lp?hash=WNzDeK0PAw
+Appu gowda H C	Partially solved	18-Nov-21	Sorted Pairs	https://6793fdf6.widgets.sphere-engine.com/lp?hash=4Wd0ocvo0e
+Appu gowda H C	Did not attempt	11-Nov-21	Sports Stats	https://6793fdf6.widgets.sphere-engine.com/lp?hash=Nw6Bh2Gy3t
+Appu gowda H C	Incorrect	14-Nov-21	TREK	https://6793fdf6.widgets.sphere-engine.com/lp?hash=jICmAHKzDG
+Appu gowda H C	Incorrect	14-Nov-21	longest-substring	#N/A
+Appu gowda H C	Did not attempt	11-Nov-21	Sports Stats	https://6793fdf6.widgets.sphere-engine.com/lp?hash=Nw6Bh2Gy3t
+Appu gowda H C	Incorrect	14-Nov-21	TREK	https://6793fdf6.widgets.sphere-engine.com/lp?hash=jICmAHKzDG
+Appu gowda H C	Incorrect	14-Nov-21	longest-substring	#N/A

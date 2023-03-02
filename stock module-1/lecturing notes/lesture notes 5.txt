@@ -1,0 +1,85 @@
+Topics to be covered
+Loops
+    What are loops?
+    For Loop
+        Syntax
+        Code Flow
+===============================================================
+Given a list of integers, count how many of them are odd;
+Input
+<One line of integer telling the size of the list = n>
+<One line containing n space separated integers>
+Output
+<One line containing an integer which is the number of odd numbers>
+Example
+Input
+5
+1 2 3 4 5
+Output
+3
+Problem Solving Steps
+1. Understand the problem statement - 
+2. Come up with new Test Cases -
+3. Come up with the Logic -
+4. Convert algo into code
+5. Dry Run
+6. Execution
+Test Cases
+1. 
+Input
+1
+44
+Output: 0
+2.
+Input
+4
+23 45 67 89
+Output: 4
+3.
+Input
+4
+22 46 90 100
+Output: 0
+4.
+Input
+0
+Output: 0
+Logic
+count = 1+1 = 2 + 1 = 3 +1 = 4 + 1 = 5
+count = 0 + 1
+1 2 3 4 5 6 7 8 9 10
+Logic
+1. Read the size of the list.
+2. Keep a count of odd numbers. Initialize it to 0.
+3. Read the first unread number.
+4. Check if the number is odd. If yes, count it as odd, increase the odd count by 1. 
+5. If not odd, do nothing. 
+6. Repeat steps 3, 4, and 5 for all numbers in the list.
+Loop
+Helps you repeat a set of lines multiple times, based on a condition.
+for loop 
+Syntax 
+for(<init expression>; <loop condition>; <step expression>) {
+    ...
+    ...
+    ...
+    ...
+}
+for (let i = 1; i <= 5; i = i+1) {
+    console.log(i);
+}
+Step Expr - What should change after every iteration.
+1. init expression is executed only once
+2. step expression is mandatorily executed after every iteration
+=======================================================
+odd-count.js
+let size = parseInt(readLine()); // 5
+let oddCount = 0;
+let input = readLine().split(" ");// Array of strings
+for(let i = 0; i < size; i = i + 1) { // i = 0
+    let num = parseInt(input[i]); 
+    if(num % 2 != 0) {
+        oddCount = oddCount + 1;
+    }
+}
+console.log(oddCount);

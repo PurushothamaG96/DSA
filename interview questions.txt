@@ -1,0 +1,1830 @@
+PASTEBIN
+API
+TOOLS
+FAQ
+paste
+Search...
+
+LOGIN SIGN UP
+Advertisement
+
+SHARE
+TWEET
+Guest User
+Untitled
+A GUEST
+JAN 16TH, 2023
+19
+0
+NEVER
+ADD COMMENT
+Not a member of Pastebin yet? Sign Up, it unlocks many cool features!
+ 44.13 KB | None |  
+     
+Introduction:
+Tell me more about your project :
+1) situation : Management has directed that there should be a way to design the insurance forms with low coding.
+2) task: So the team decided to build a tool which can help build forms with drag and drop options.
+3) action: I was in the team and I was involved in building micro services and frontends with MERN stack.
+4) result: I finlly was able to build the tool which helped the non progremers to design forms with ease.
+ 
+ 
+event loop is what allows node js to perform non blocking io operations. Despite the fact that js is single threaded by offloading operations to system kernal.
+kernals are multi threaded and can handle multiple operations executing in background. 
+When one of these operations completes, kernal tells nodejs. Node js calls appropriate callbacks from the queue.
+callbacks from Micro (promises),Macro (settimeout,setinterval,eventHandlers) queues are put to callstack by event loop and executed by mainthread.
+ 
+ 
+ 
+var orders = [
+{"orderid": 1, "amount": 250, "items": ["mask","shirt","pant"]},
+{"orderid": 2, "amount": 300, "items": ["water bottle","tablefan"]},
+{"orderid": 3, "amount": 78, "items": ["glouse"]},
+{"orderid": 4, "amount": 460, "items": ["helmet","shoe"]},
+];
+ 
+a) Summerize all the amount using functional programming.
+b) Remove all the orders with amount less than 100.
+c) Loop over the array and dynamically add one more property called delivery_charge to all the objects. Default value for delivery_charge is 0, if the amount is less than 100 then delivery_charge is 50.
+d) Based on the value of amount, Sort the items in the orders array in asending order.
+ 
+Solutions: 
+a) 
+solution based on for loop approach:
+ 
+var total_sum = 0;
+for (let i=0; i<orders.length; i++) {
+  total_sum += orders[i].amount;
+}
+console.log(total_sum);
+ 
+solution based on forEach approach:
+ 
+var total_sum = 0;
+orders.forEach(function(item,index) {
+  total_sum += item.amount;
+});
+console.log(total_sum);
+ 
+solution based on functional approach:
+ 
+var total_sum = orders.reduce(function(sum, item) {
+return sum + item.amount;
+},0);
+console.log(total_sum);
+ 
+b) 
+solution based on for loop approach:
+ 
+var filtered_orders = [];
+for (var i=0; i<orders.length; i++) {
+    if(orders[i].amount>100) {
+    filtered_orders.push(orders[i]);
+  }
+}
+console.log(filtered_orders);
+ 
+solution based on forEach approach :
+ 
+var filtered_orders = [];
+orders.forEach(function(item,index) {
+  if(item.amount>100) {
+    filtered_orders.push(item);
+  }
+});
+console.log(filtered_orders);
+ 
+solution based on functional approach :
+ 
+var filtered_orders = orders.filter(function(item) {
+  if(item.amount > 100) {
+    return item;
+  }
+});
+console.log(filtered_orders);
+ 
+c) 
+solution based on for loop approach:
+ 
+var transformed_orders = [];
+for (let i=0; i<orders.length; i++) {
+    var order = {...orders[i],"delivery_charge":0 };
+    if(orders[i].amount<100) {
+      order.delivery_charge = 50;
+  }
+  transformed_orders.push(order);
+}
+console.log(transformed_orders);
+ 
+solution based on forEach approach:
+ 
+var transformed_orders = [];
+orders.forEach(function(item,index) {
+    var order = {...item,"delivery_charge":0 };
+    if(item.amount<100) {
+      order.delivery_charge = 50;
+  }
+  transformed_orders.push(order);
+});
+console.log(transformed_orders);
+ 
+solution based on functional approach:
+ 
+var transformed_orders = orders.map(function(item, index) {
+  item.delivery_charge = 0;
+  if(item.amount<100) {
+    item.delivery_charge = 50;
+  }
+  return item;
+});
+console.log(transformed_orders);
+ 
+d) 
+function compareNumbers(firstItem, secondItem) {
+  return firstItem.amount - secondItem.amount;
+}
+var sorted_orders = orders.sort(compareNumbers);
+console.log(sorted_orders);
+ 
+What is the output of the following code ?
+ 
+var globalvariable = 10;
+function mother() {
+   var closure_variable = 20;
+   var baby = function() {
+	globalvariable++;
+	closure_variable++;
+	console.log(globalvariable);
+	console.log(closure_variable);
+	};
+   return baby;
+}
+var baby1 = mother();
+baby1();
+var baby2 = mother();
+baby2();
+ 
+output:
+11
+21
+12
+21
+ 
+How to make deep copy? ( The question covers the following concepts: nested JSON, deep copy vs shallow copy, Object.assign, spread operator, JSON.parse, JSON.stringify )
+ 
+var original = {
+  "first_level_key": {
+    "second_level_key": "original_value"
+  }
+};
+ 
+var shallowcopy1 = Object.assign({},original);
+var shallowcopy2 = {...original};
+shallowcopy1.first_level_key.second_level_key = "Vikram";
+console.log(original);
+shallowcopy2.first_level_key.second_level_key = "Sachin";
+console.log(original);
+ 
+Solution:
+ 
+var deepcopy = JSON.parse(JSON.stringify(original));
+deepcopy.first_level_key.second_level_key = "Vikram";
+console.log(original); 
+ 
+Explanation:
+A shallow copy means the only first level key,values are copied, deeper level keys are still referring the original objects memory. both spread operator and Object.asign makes shalow copy. 
+So the trick is to convert the nested json_object to Json_string and then convert the json_string back to Json_object.
+ 
+ 
+ 
+ 
+ 
+ 
+Write a constructor function for implementing the method chaining for the given code snippet :
+ 
+var a = new calculator(0);
+var result = a.add(5).add(3).multiply(2).subtract(1).equals();
+console.log(result);
+ 
+Solution:
+The question covers closure,fat arrow function,this pointer,constructor function and method chaining concepts:
+ 
+function calculator(closure_variable) {
+this.add = (method_parameter)=> {
+closure_variable = closure_variable + method_parameter;
+return this;
+};
+this.subtract = (method_parameter)=> {
+closure_variable = closure_variable - method_parameter;
+return this;
+};
+this.multiply = (method_parameter)=> {
+closure_variable = closure_variable * method_parameter;
+return this;
+};
+this.equals = ()=> {
+return closure_variable;
+};
+}
+var a = new calculator(0);
+var result = a.add(5).add(3).multiply(2).subtract(1).equals();
+console.log(result);
+ 
+The question covers Js function currying, closure, first class functions (function as a value) and anonymous function : 
+ 
+function  multiply(a)
+{
+return function(b)
+{
+return function(c)
+{
+return  a*b*c;
+};
+};
+}
+multiply(2)(3)(1); 
+ 
+var inner = multiply(2); // same as above
+var innermost = inner(3);
+var z = innermost(1);
+ 
+What is the output ?
+ 
+for (var i = 0; i < 3; i++) {
+  setTimeout(function() { console.log(i); }, 1000);
+}
+ 
+Expected answer : 
+3
+3 
+3
+What changes need to be made for printing following output:
+0
+1
+2
+ 
+Solution using IFFI : setTimeout is the higher order function which will be called immediately but callback is called after time interval.
+ 
+a)
+for (var i = 0; i < 3; i++) {
+  setTimeout(function (j){
+    return function () {
+      console.log(j);
+    }
+  }(i), 1000 + i);
+}
+b)
+for (var i = 0; i < 3; i++) {
+	(function(j){
+		setTimeout(function(){console.log(j);}, 1000 + i);
+	})(i)
+}
+ 
+Solution using let (Block scoping): Its creates separate binding for each call.
+ 
+for (let i = 0; i < 3; i++) {
+  setTimeout(function() { 
+    console.log(i); 
+  }, 1000 + i);
+}
+ 
+Using closure concept write the calculator function which returns a adder function.
+ 
+var adder = calculator(6);
+adder(10); // prints 16
+adder(21); // prints 27
+ 
+Solution :
+ 
+function calculator(sum) {
+  return function(num) {
+    console.log(sum + num);
+  }
+}
+ 
+What is the output ?
+(function(){
+  var a = b = 3;
+})();
+console.log(a,b);
+ 
+Output:
+undefined,3
+statement var a = b = 3; is shorthand for the statements b = 3; and var a = b;, b ends up being a global variable (since it is not preceded by the var keyword) and is therefore still in scope even outside of the enclosing function.
+ 
+What will the code below output to the console and why (this pointer and scopes)?
+ 
+var basket = {
+    "fruit": "apple",
+    outer_function: function() {
+        var self = this;
+        console.log(this.fruit);
+        console.log(self.fruit);
+        (function() {
+            console.log(this.fruit);
+            console.log(self.fruit);
+        }());
+    }
+};
+basket.outer_function();
+ 
+Output: 
+apple
+apple
+undifined
+apple
+ 
+In the outer_function, both this and self refer to basket and therefore both can properly reference and access fruit.
+ 
+In the inner IFFI function, though, this no longer refers to basket. As a result, this.fruit is undefined in the inner IFFI function, whereas the reference to the local variable self remains in scope and is accessible there.
+ 
+Consider the two functions below. Will they both return the same thing? Why or why not?
+ 
+function mother()
+{
+  return {
+      "represents": "true love"
+  };
+}
+ 
+function girlfriend()
+{
+  return
+  {
+      "represents": "true love"
+  };
+}
+ 
+console.log(mother());
+console.log(girlfriend());
+ 
+Output:
+Object {"represents": "true love" }
+undefined
+ 
+Reason:
+when the line containing the return statement (with nothing else on the line) is encountered in lover(), a semicolon is automatically inserted immediately after the return statement.
+ 
+In what order will the numbers 1-4 be logged to the console when the code below is executed? Why?
+ 
+(function() {
+    console.log(1); 
+    setTimeout(function(){console.log(2)}, 1000); 
+    setTimeout(function(){console.log(3)}, 0); 
+    console.log(4);
+})();
+ 
+Output:
+1
+4
+3
+2
+ 
+ 
+ 
+4) What will the code below output to the console and why (Implicit coercion)?
+ 
+console.log(1 +  "2" + "2");
+console.log(1 +  +"2" + "2");
+console.log(1 +  -"1" + "2");
+console.log(+"1" +  "1" + "2");
+console.log( "A" - "B" + "2");
+console.log( "A" - "B" + 2);
+ 
+The above code will output the following to the console:
+ 
+"122"
+"32"
+"02"
+"112"
+"NaN2"
+NaN
+ 
+Reason: 
+Example 1: 1 + "2" + "2" Outputs: "122" Explanation: The first operation to be performed in 1 + "2". Since one of the operands ("2") is a string, JavaScript assumes it needs to perform string concatenation and therefore converts the type of 1 to "1", 1 + "2" yields "12". Then, "12" + "2" yields "122".
+ 
+Example 2: 1 + +"2" + "2" Outputs: "32" Explanation: Based on order of operations, the first operation to be performed is +"2" (the extra + before the first "2" is treated as a unary operator). Thus, JavaScript converts the type of "2" to numeric and then applies the unary + sign to it (i.e., treats it as a positive number). As a result, the next operation is now 1 + 2 which of course yields 3. But then, we have an operation between a number and a string (i.e., 3 and "2"), so once again JavaScript converts the type of the numeric value to a string and performs string concatenation, yielding "32".
+ 
+Example 3: 1 + -"1" + "2" Outputs: "02" Explanation: The explanation here is identical to the prior example, except the unary operator is - rather than +. So "1" becomes 1, which then becomes -1 when the - is applied, which is then added to 1 yielding 0, which is then converted to a string and concatenated with the final "2" operand, yielding "02".
+ 
+Example 4: +"1" + "1" + "2" Outputs: "112" Explanation: Although the first "1" operand is typecast to a numeric value based on the unary + operator that precedes it, it is then immediately converted back to a string when it is concatenated with the second "1" operand, which is then concatenated with the final "2" operand, yielding the string "112".
+ 
+Example 5: "A" - "B" + "2" Outputs: "NaN2" Explanation: Since the - operator can not be applied to strings, and since neither "A" nor "B" can be converted to numeric values, "A" - "B" yields NaN which is then concatenated with the string "2" to yield “NaN2”.
+ 
+Example 6: "A" - "B" + 2 Outputs: NaN Explanation: As exlained in the previous example, "A" - "B" yields NaN. But any operator applied to NaN with any other numeric operand will still yield NaN.
+ 
+What would the following lines of code output to the console (logical operators) ?
+ 
+console.log(0 || 3);
+console.log(5 || 2);
+console.log(0 && 1);
+console.log(1 && 5);
+ 
+Output:
+3
+5
+0
+5
+ 
+ 
+----------------- new ------------------------------
+ 
+ 
+Given A is contrast of T and G is contract of C, Write a function that prints contrast of string.
+Eg: change("AACTTG"); Output:  TTGAAC
+function get_contrast(str) {
+  var  mapping = {"A":"T","G":"C","T":"A","C":"G"};
+  var contrast = str.replace(/[ATGC]/g, function(match){
+    return mapping[match];
+  });
+  return contrast;
+}
+ 
+console.log(change('AACTTG'));
+ 
+Write a simple function that returns a boolean indicating whether or not a string is a palindrome.
+ 
+Solution based on forloop:
+ 
+function isPalindrome(str) {
+  let reverse = "";
+  for(i=str.length-1;i>=0;i--) {
+    reverse += str[i];
+  }
+  return str == reverse;
+}
+ 
+Solution based on functional programming:
+ 
+function isPalindrome(str) {
+  str = str.replace(/\W/g, '').toLowerCase();
+  return (str == str.split('').reverse().join(''));
+}
+ 
+console.log(isPalindrome("level"));  // logs 'true'
+console.log(isPalindrome("levels")); // logs 'false'
+ 
+Write a simple function that returns a boolean indicating whether or not 2 strings are Anagrams.
+ 
+Solution based on inbuilt sort method :
+ 
+var firstWord = "Mary";
+var secondWord = "Army";
+ 
+ 
+function isAnagram(a,b) {
+  a = a.replace(/\W/g, '').toLowerCase();
+  b = b.replace(/\W/g,'').toLowerCase();
+ 
+  a = a.split("").sort().join("");
+  b = b.split("").sort().join("");
+ 
+  return a === b ;
+ 
+}
+ 
+Solution based on custom bubble sort function :
+ 
+function bubblesort(arr) {
+  for(let i=0; i< arr.length;i++) {
+    for(let j=0;j<(arr.length-i-1);j++) {
+      if(arr[j]>arr[j+1]){
+        let temp = arr[j];
+        arr[j] = arr[j+1];
+        arr[j+1] = temp;
+      }
+    }
+  }
+  return arr;
+}
+ 
+function isAnagram(a,b) {
+  a = bubblesort(a.split("")).join("");
+  b = bubblesort(b.split("")).join("");
+  return a === b ;
+}
+ 
+console.log(isAnagram(firstWord,secondWord));
+ 
+How to create a cookie ?
+document.cookie = "key1= value1;key2=value2;expires=date";
+How to access cookie ?
+document.cookie.split()
+ 
+ 
+what is the output (typeof operator and scopes)
+var y = 1;
+if(function f(){}) {
+y += typeof f;
+} 
+console.log(y);
+ 
+what is the output ?
+ 
+var a = 1;
+var b = function(){
+  a = 10;
+  return a;
+  function a() {
+    a = 5;
+  }
+}
+console.log(b(),a)
+ 
+output:
+10 
+1
+ 
+What is the output ?
+var f1 = function f2() {
+return "foo";  
+}
+ 
+console.log(typeof f2());
+ 
+output:
+ReferenceError: f2 is not defined
+ 
+ 
+event delegation vs event bubbling/propagation ?
+event delegation : Js event listeners fire not only on a single DOM element but on all its descendants.
+event bubbling : Inverse of above. events on element will bubble up and also fire on all parents.
+ 
+ 
+These questions will cover entire Hoisting concept:
+What are the outputs ?
+ 
+a = 1;
+console.log(a);
+var a;
+ 
+console.log(b);
+var b = 1;
+ 
+var c;
+console.log(c);
+c = 1;
+ 
+d = 1;
+console.log(d);
+ 
+console.log(e);
+e = 1;
+ 
+function foo() {
+  console.log(f);
+  var f = 1;
+}
+ 
+foo();
+ 
+'use strict';
+console.log(g);
+g = 1;
+ 
+ 
+console.log(h);
+let h = 1;
+ 
+let i;
+console.log(i); 
+i = 1;
+ 
+bar(); 
+function bar() {
+  console.log('Hello');
+};
+ 
+boo(); 
+var boo = function() {
+  console.log('Hello');
+};
+ 
+bat(); 
+var bat = function cat() {
+  console.log('Hello');
+};
+ 
+ 
+var dog = 1;
+a)
+function dog() {}
+console.log(typeof dog);
+ 
+var bird;
+function bird() {}
+console.log(typeof bird);
+ 
+var emp1 = new Employee("Vikram","10000");
+console.log(emp1); 
+class Employee {
+  constructor(name, salary) {
+    this.name = name;
+    this.salary = salary;
+  }
+}
+ 
+ 
+var emp1 = new Employee("Vikram","10000");
+console.log(emp1); 
+var Employee = class{
+  constructor(name, salary) {
+    this.name = name;
+    this.salary = salary;
+  }
+}
+ 
+Output : 
+1             // var a is hoisted
+undefined     // var b is hoisted (declaration) but assignment (defination) is not hoisted.
+undefined     // assignment (defination) is not hoisted
+undefined     // all undeclared variables are global variables.
+ReferenceError: e is not defined
+undefined     // same behaviour in function
+ReferenceError: g is not defined
+ReferenceError: h is not defined   // ES6 let throws error
+undefined 
+Hello
+TypeError: boo is not a function       // function expressions are not hoisted
+TypeError: bat is not a function       // declaration is hoisted but not assignment
+number             // Variable assignment takes precedence over function declaration
+function	  // Function declarations take precedence over variable declarations
+ReferenceError: Cannot access 'Employee' before initialization   // class declarations are hoisted. but uninitialised until evaluation.
+TypeError: Employee is not a constructor    //  class expressions are not hoisted
+ 
+ 
+ 
+ 
+The question covers following concepts:
+IIFI function
+inner functions
+built-in arguments object
+type coercian 
+When to use for in loop concepts
+ 
+What is the output  ?
+ 
+(function test() {
+	function sum() {
+		var sum = 0, i;
+		for (i in arguments) {
+			sum += i;
+		}
+		return sum;
+	}
+ 
+	console.log(sum(10, 20, 30, 40, 50));
+})();
+ 
+output : "001234"
+ 
+Explanation :
+ 
+//for in loop is widely used to iterate the keys of an object.
+ 
+var person = {
+  "name":"Vikram",
+  "id": 1
+}; 
+ 
+for (i in person ) {
+  console.log(i);
+}
+ 
+//Arrays in Js are objects with their indexes as key and values as values. 
+ 
+var person = ["name","id"];
+for (i in person ) {
+  console.log(i);
+}
+// built-in arguments will capture all the arguments that are passed during function call even when there is no respective parameters defined in the function declaration. 
+ 
+function print() {
+  console.log(arguments);
+}
+print("name","id");
+ 
+// When you are adding string and numeric value, the js compiler will automatically convert the numeric value to string and does the string concatenation.
+ 
+console.log("String + numeric ? ", "50" + 2);
+ 
+ 
+(function test() {
+	function sum() {
+		var sum = 0, i;
+		console.log("arguments object looks like this : ",arguments);
+		for (i in arguments) {
+			sum += i;
+		}
+		return sum;
+	}
+ 
+	console.log(sum(10, 20, 30, 40, 50));
+})();
+ 
+ 
+ 
+ 
+ 
+(function test () {
+    var arguments;
+	console.log(arguments[0]);
+})(200);
+ 
+output:
+200
+ 
+Given numbers 1,2,3,4,5,6,7,8,9,10. Write a function to find (Square of sum of numbers) - ( Sum of square of each numbers)
+Eg : (55^2) - (1^2 + 2^2 + --------- + 10^2) 
+ 
+function calculate() {
+  var sum = 0;
+  var sumofsquares = 0;
+  for(var i=0; i< arguments.length;i++) {
+    var num = arguments[i];
+    sum = sum + num;
+    sumofsquares = sumofsquares + (num * num) ;
+  }
+  var squareofsum = sum * sum;
+  return squareofsum - sumofsquares;
+}
+ 
+console.log(calculate(1,2,3,4,5,6,7,8,9,10)); // 2640
+ 
+ 
+Remove Duplicate integers from an array:
+ 
+var a = [2,6,1,9,3,2,6];
+a = [...new Set(a)];
+console.log(a);
+ 
+How to reverse a string ?
+ 
+Builtin :
+ 
+var a = "cat";
+var reversed = a.split("").reverse().join("")
+console.log(reversed);
+ 
+Custom :
+ 
+function reverseString(str) {
+    var newString = "";
+    for (var i = str.length - 1; i >= 0; i--) {
+        newString += str[i];
+    }
+    return newString;
+}
+reverseString('hello');
+ 
+How can you control the value of this?
+var cricketer = {
+  name: "Sachin Tendulkar",
+  greet: function(name) {
+    console.log(this.name + " wishes happy birthday to " + name);
+  }
+}
+ 
+cricketer.greet("Vikram"); 
+cricketer.greet.call({ name: "Virat Koli" }, "Vikram"); 
+cricketer.greet.apply({ name: "Saurav ganguly" },["Vikram"]); 
+var modified_greet = cricketer.greet.bind({ name: "Dhoni" });
+modified_greet("Vikram");
+modified_greet.call({ name: "Rohit" })
+ 
+Explanations:
+The main purpose of call() and apply() is to set the context of this inside a function irrespective whether that function is being called in the global scope or as object's method.
+ 
+You can pass an object as a first parameter in call() and apply() to which the this inside a calling function should point to.
+ 
+HTML inline vs block elements :
+<p> I am <b> happy </b> </p>
+<p> I am <i> sad </i> </p>
+ 
+ 
+Virtual DOM:
+ 
+const App = () => {
+return (
+        <HOF >
+            <h1 id="title"> I love mother </h1>
+        </HOF>
+);
+}
+ 
+The above JSX will convert into :
+ 
+const App = () => {
+        return React.createElement("HOF",null, React.createElement("h1",{"id": "title"},"I love mother"));
+}
+ 
+ 
+What will the react component return ? 
+react Component returns the react element.
+ 
+{
+	"type": "HOF",
+	"key": null,
+	"ref": null,
+	"$$typeof": Symbol(react.element),
+	"props": {
+		"children": {
+				"type": "h1",
+				"key": null,
+				"ref": null,
+				"props": {
+						"id": "title",
+						"children": "I love mother"
+			 	 	 } 
+			    }
+		 }
+}
+ 
+ 
+ 
+At the root component level :
+ 
+ReactDOM.render(
+  React.createElement('App', null, React.createElement(....this will continue till the last level child component)),
+  document.getElementById('root')
+);
+ 
+The nested tree of react elements is called as Virtual DOM. Its Just huge javascript object.
+ 
+ 
+ 
+What’s new in HTML 5 Explain some of them Block elements and inline elements Why we use header tag How to center an image Remove Duplicate integers from an array [1,2,2,3,4,5] How to reverse a string with ex. Set time-out & set intervals We can build our website using HTML CSS &JS. Then why we use react Virtual Dom vs real dom Clean up function/ unmounting Dependency array
+ 
+ 
+useMemo:
+https://kentcdodds.com/blog/usememo-and-usecallback
+ 
+Optimize the below code : 
+/*
+ 
+ 
+function Child({onClick, count}) {
+  return <button onClick={onClick}>{count}</button>
+}
+ 
+function Parent() {
+  const [count1, setCount1] = React.useState(0)
+  const increment1 = () => setCount1(c => c + 1)
+  const [count2, setCount2] = React.useState(0)
+  const increment2 = () => setCount2(c => c + 1)
+  return (
+    <>
+      <Child count={count1} onClick={increment1} />
+      <Child count={count2} onClick={increment2} />
+    </>
+  )
+}
+ 
+ 
+ 
+Solution: 
+const Child = React.memo(function Child({onClick, count}) {
+  return <button onClick={onClick}>{count}</button>
+},[count])
+function Parent() {
+  const [count1, setCount1] = React.useState(0)
+  const increment1 = React.useCallback(() => setCount1(c => c + 1), [])
+  const [count2, setCount2] = React.useState(0)
+  const increment2 = React.useCallback(() => setCount2(c => c + 1), [])
+  return (
+    <>
+      <Child count={count1} onClick={increment1} />
+      <Child count={count2} onClick={increment2} />
+    </>
+  )
+}
+ 
+*/
+Convert the below functions tofat arrow function :
+ 
+function a(x,y) {
+console.log("Hello");
+return x;
+}
+ 
+function b(x) {
+console.log("Hello");
+return x;
+}
+ 
+function c(x) {
+  return x;
+}
+ 
+solution :
+ 
+var a = (x,y) => {
+  console.log("Hello");
+  return x;
+}
+ 
+ 
+var b = x =>{
+  console.log("Hello");
+  return x;
+}
+ 
+var c = x => x;
+ 
+ 
+function getGrade(mark)
+{
+  switch (mark) {
+ 
+    case (mark<35):
+        console.log("Fail");
+        break;
+ 
+    case (mark>35 && mark<60):
+        console.log("Second Class");
+        break;
+ 
+    case (mark>=60 && mark<=70):
+        console.log('First Class');
+        break;
+ 
+    default:
+        console.log('Distinction');
+        break;
+  }
+}
+ 
+getGrade(38);
+ 
+var myVar = 100;
+function SomeFunction() {
+   function a() {
+    function WhoIsThis() {
+        var myVar = 200;
+ 
+        alert("myVar = " + myVar); // 200
+        alert("this.myVar = " + this.myVar); // 100
+    }
+   WhoIsThis();
+   }
+ 
+    a(); 
+}
+SomeFunction();
+ 
+ 
+var color = "black";
+window.color = "grey";
+this.color = "blue";
+function constructorfunction() {
+   this.color = "red"; // Initialization which happens only once during object construction
+   this.normalmethod = function(){
+        var color = "green"; // local variable of the normalmethod
+ 
+        console.log("normalmethod localvariable = "+ color); 
+        console.log("normalmethod this.color = " + this.color);  
+    };
+  this.special_method = function(callback_parameter) {
+    console.log("special_method this.color = "+this.color);
+	callback_parameter();
+  }
+  this.fatarrow_method = (callback)=>{
+    console.log("fatarrow_method this.color = " + this.color);
+    callback();
+  }
+  (function innerfunction() {
+    console.log("inner function this.color = "+this.color);
+  })();
+  this.setColor = function(color_paramenter) {
+    this.color = color_paramenter;
+    color = "pink";
+  }
+}
+ 
+var obj1 = new constructorfunction(); //Construction invocation
+var obj2 = new constructorfunction(); //Construction invocation
+console.log("obj1.color = "+obj1.color); // use . operator to access the property of any object.
+console.log("obj2.color = "+obj2.color);
+obj1.normalmethod(); // use .operator to call any methods of object.
+obj2.normalmethod();
+ 
+obj1.color = "white"; // use . operator with = operator to change / set value to any property of object. if the property is not existing then it is dynamically created and value is assigned.
+console.log("obj1.color = "+obj1.color);  
+console.log("obj2.color = "+obj2.color);
+obj1.special_method(function(){
+  console.log("anonymous callback function argument to special_method this.color = "+this.color);
+});
+obj1.special_method(()=>{
+  console.log("fatarrow callback function argument to special_method this.color ="+this.color);
+});
+obj1.fatarrow_method(()=>{
+  console.log("fatarrow_method this.color = "+this.color);
+});
+ 
+console.log("global window.color = " + color); // variable defined in global scope
+console.log("global this.color = " + color); // this points to window
+constructorfunction(); // constructor function invocked as normal function
+console.log("global window.color = " +color);
+ 
+obj1.setColor("orange");
+console.log("obj1.color = "+obj1.color); 
+console.log("global window.color = " + color);
+ 
+color = "dark green";
+ 
+function normalfunction(method_parameter) {
+    console.log("Inside normalfunction method_parameter = "+ method_parameter);
+    console.log("Inside normalfunction this.color = "+ this.color);
+}
+ 
+var obj3 = { "color" : "yellow" , "normalmethod": normalfunction }; // object literals
+ 
+var obj4 = { "color" : "light blue" , "normalmethod": normalfunction };
+ 
+normalfunction("vikram"); // 'this' will point to window object
+ 
+normalfunction.call(obj3,"vikram"); // 'this' will point to obj3
+ 
+normalfunction.apply(obj4,["vikram"]); // 'this' will point to obj4
+ 
+obj3.normalmethod.call(window,"vikram"); // 'this' will point to window object
+ 
+normalfunction.apply(obj3,["vikram"]); // 'this' will point to obj3
+ 
+var bindedfunction = normalfunction.bind(obj4); 
+bindedfunction("vikram");
+ 
+bindedfunction.apply(obj3,["vikram"]);
+Precedence: 
+So these 4 rules applies to this keyword in order to determine which object this refers to. The following is precedence of order.
+ 
+bind()
+call() and apply()
+Object method
+Global scope
+ 
+So, first check whether a function is being called as callback function using bind()? If not then check whether a function is being called using call() or apply() with parmeter? If not then check whether a function is being called as an object function? Otherise check whether a function is being called in the global scope without dot notation or using window object.
+ 
+Thus, use these simple rules in order to know which object the 'this' refers to inside any function.
+ 
+The new keyword performs following four tasks:
+ 
+1) It creates new empty object e.g. obj = { };
+2) points the this pointer of constructor function to newly created empty object.
+3) It sets new empty object's invisible 'prototype' property to be the constructor function's visible and accessible 'prototype' property. (Every function has visible 'prototype' property whereas every object includes invisible 'prototype' property)
+4) It binds property or function which is declared with this keyword to the new object.
+5) It returns newly created object unless the constructor function returns a non-primitive value (custom JavaScript object). If constructor function does not include return statement then compiler will insert 'return this;' implicitly at the end of the function. If the constructor function returns a primitive value then it will be ignored.
+ 
+ 
+Private properties in classes and constructors:
+ 
+ES6
+ 
+class Person {
+    constructor(name) {
+        var _name = name
+        this.setName = function(name) { _name = name; }
+        this.getName = function() { return _name; }
+    }
+}
+ 
+ES5
+ 
+function Person(name) {
+    var _name = name
+    this.setName = function(name) { _name = name; }
+    this.getName = function() { return _name; }
+}
+ 
+ 
+The below code snippet has logical control flow bug, solve the problem with callbacks,promises and async-await :
+ 
+function go_to_bangalore() {
+  console.log("go to bangalore and then to office");
+  console.log("finish office commitments");
+}
+ 
+function stay_at_home() {
+  console.log("be in home");
+  console.log("finish house painting");
+}
+ 
+function governmentDecision() {
+    setTimeout(function(){
+        var active_cases = "more"
+        if(active_cases == "less") {
+            return("lockdown lifted");
+         } else {
+            return("lockdown continued");
+         }
+ 
+    },10000); 
+}
+ 
+function yourDecision() {
+  var result = governmentDecision()
+  if(result=="lockdown lifted") {
+      go_to_bangalore();
+  } else {
+    stay_at_home();
+  }
+ 
+}
+ 
+yourDecision()
+ 
+Solution: 
+ 
+Based on callback :
+ 
+function governmentDecision(callback) {
+    setTimeout(function(){
+        var active_cases = "less"
+        if(active_cases == "less") {
+            callback("lockdown lifted");
+         } else {
+            callback("lockdown continued");
+         }
+ 
+    },10000); 
+}
+ 
+function yourDecision(result) {
+  if(result=="lockdown lifted") {
+      go_to_bangalore();
+  } else {
+    stay_at_home();
+  }
+ 
+}
+ 
+governmentDecision(yourDecision)
+Based on Promices:
+ 
+function governmentDecision() {
+  let promise = new Promise(function(resolve, reject) {
+    setTimeout(function(){
+      var active_cases = "more"
+        if(active_cases == "less") {
+            resolve("lockdown lifted");
+         } else {
+            reject("lockdown continued");
+         }
+ 
+    },10000); 
+  });
+  return promise;
+}
+ 
+function yourDecision() {
+  governmentDecision()
+.then(go_to_bangalore)
+.catch(stay_at_home)
+}
+ 
+yourDecision()
+ 
+ 
+Based on async await:
+ 
+async function yourDecision() {
+  var decision = await governmentDecision();
+  if(decision == "lockdown lifted") {
+    go_to_bangalore()
+  } else{
+    stay_at_home();
+  }
+}
+ 
+yourDecision()
+ 
+function altEvenArray(arr){
+	for (let i =0;i<arr.length;i=i+2) {
+        if(!is_alt_even_arr(arr[i],arr[i+1])) {
+          return 0; // not alt even
+        }
+    }
+    return 1; // alt even
+}
+ 
+function is_alt_even_arr(num1,num2) {
+    let sum1 = get_sum(num1);
+    let sum2 = get_sum(num2);
+    let status = false; 
+    if(sum1 % 2 == 0 || sum2 % 2 == 0) {
+      status = true;
+    }
+  return status;
+}
+function get_sum(num){
+   return String(Math.abs(num)).split("").reduce((sum,item)=>{return sum + parseInt(item);},0);
+}
+console.log(altEvenArray([101,14,101,2]))
+ 
+What is generator function in Js ? Write generator function getId which returns the incremented id everytime its called.
+ 
+function* getId() {
+  var index = 0;
+  while (true)
+    yield index++;
+}
+ 
+var gen = getId();
+ 
+console.log(gen.next().value); // 0
+console.log(gen.next().value); // 1
+console.log(gen.next().value); // 2
+console.log(gen.next().value); // 3
+ 
+ 
+function* anotherGenerator(i) {
+  yield i + 1;
+  yield i + 2;
+  yield i + 3;
+}
+ 
+function* generator(i) {
+  yield i;
+  yield* anotherGenerator(i);
+  yield i + 10;
+}
+ 
+var gen = generator(10);
+ 
+console.log(gen.next().value); // 10
+console.log(gen.next().value); // 11
+console.log(gen.next().value); // 12
+console.log(gen.next().value); // 13
+console.log(gen.next().value); // 20
+ 
+Passing arguments into generators :
+ 
+function* logGenerator() {
+  console.log(0);
+  console.log(1, yield);
+  console.log(2, yield);
+  console.log(3, yield);
+}
+ 
+var gen = logGenerator();
+ 
+// the first call of next executes from the start of the function
+// until the first yield statement
+gen.next();             // 0
+gen.next('pretzel');    // 1 pretzel
+gen.next('california'); // 2 california
+gen.next('mayonnaise'); // 3 mayonnaise
+ 
+Return statement in generator :
+function* yieldAndReturn() {
+  yield "Y";
+  return "R";
+  yield "unreachable";
+}
+ 
+var gen = yieldAndReturn()
+console.log(gen.next()); // { value: "Y", done: false }
+console.log(gen.next()); // { value: "R", done: true }
+console.log(gen.next()); // { value: undefined, done: true }
+ 
+Usecase:
+function* powers(n){
+     //endless loop to generate
+     for(let current =n;; current *= n){
+         yield current;
+     }
+}
+ 
+for(let power of powers(2)){
+     //controlling generator
+     if(power > 32) break;
+     console.log(power)
+           //2
+          //4
+         //8
+        //16
+       //32
+}
+ 
+ 
+ 
+Maximum occurence of character in a string :
+ 
+"chvvkhkjlklkmklm"
+ 
+ 
+function maxChar(str){
+    const myStr = str.toLowerCase();
+    const charMap = {};
+    let max = 0;
+    let maxChar = '';
+ 
+    for (let char of myStr) {
+      if (!charMap[char]) {
+        charMap[char] = 1;
+      } else {
+        charMap[char]++;
+      }
+    }
+ 
+    for (let char in charMap) {
+      if (charMap[char] > max) {
+        max = charMap[char];
+        maxChar = char;
+      }
+    }
+ 
+    return maxChar;
+ }
+ 
+var sumof2largestnos = function (arr){ 
+    var max = Math.max(...arr); // get the max of the array
+    arr.splice(arr.indexOf(max), 1); // remove max from the array
+    return max + Math.max(...arr); // get the 2nd max and add with first max
+};
+ 
+function isPrime(num) {
+  for(var i = 2; i < num; i++)
+    if(num % i === 0) return false;
+  return num > 1;
+}
+ 
+ 
+ 
+class grandfather {
+  constructor(character) {
+    this.character = character;
+  }
+ singing(){
+    console.log("Singing song");
+  } 
+}
+ 
+class father extends grandfather {
+  constructor(character,money){
+    super(character);
+    this.money = money;
+  }
+  earning_money(){
+    console.log("Hard earned money")
+  }
+}
+ 
+class son extends father {
+  constructor(character,money,education){
+    super(character,money);
+    this.education = education;
+  }
+  spending_money(){
+    console.log("spends money");
+  }
+}
+let son1 = new son("generous",10000,"MBA")
+ 
+console.log(son1.singing());
+ 
+ 
+function grandfather(character) {
+  this.character = character;
+}
+grandfather.prototype.singing = function(){
+    console.log("Singing song");
+}
+ 
+function father(character,money){
+    grandfather.call(this,character);
+    this.money = money;
+}
+father.prototype = Object.create(grandfather.prototype);
+father.constructor = father;
+father.prototype.earning_money=function(){
+    console.log("Hard earned money")
+  }
+ 
+function son(character,money,education){
+ 
+    father.call(this,character,money);
+    this.education = education;
+ 
+ 
+}
+son.prototype = Object.create(father.prototype);
+son.prototype.constructor = son;
+son.prototype.spending_money = function(){
+    console.log("spends money");
+  }
+let son1 = new son("generous",10000,"MBA")
+ 
+console.log(son1.singing());
+ 
+ 
+ 
+ 
+function Harsh({fathersMoney}) {
+var [bankAccount,setBankAccount] = useState(50000);
+ 
+var tired = false;
+ 
+useEffect(function() {
+setBankAccount(bankAccount+fathersMoney);
+},[fathersMoney]);
+ 
+function doHardWork(){
+// logic for working hard
+tired = true;
+setBankAccount(bankAccount+1000);
+}
+//logic
+return <div>
+<b>My earning :</b><h1>{bankAccount}</h1>
+<button onClick={doHardWork()}> Do hard Work </button>
+</div>
+ 
+}
+ 
+ 
+function Father(){
+var bankAccount = 500000;
+ 
+return <div><Harsh fathersMoney={5000} /></div>
+ 
+ 
+}
+ 
+class Father{
+	constructor(props){ // initialization
+		this.money = props.money;
+	}
+ 
+}
+ 
+class You extends extends React.Component{
+	constructor(props){
+		super(props)
+		this.state = {profession : "doctor","marry":26};
+	}
+	static getDerivedStateFromProps(props){
+		return {...this.state,profession:props.job}	
+	}
+	componentDidMount() {
+		axios(phone call to your fiend).then((response)=>{
+			this.setState({...this.state,profession:response.data.profession}) 
+		})
+	}
+	render() {
+		return <div><h1> I will become {this.state}</h1><div>
+ 	}
+}
+ 
+var youobject = <You job="banker",money=1000000 /> 
+youobject.profession = "software engineer"
+ 
+Webcomponents:
+Custom components work as standard DOM elements.
+ 
+function Comment(text) {
+  HTMLElement.call(this)
+  this.textContent = text
+  this.shalow = new ShadowRoot(this)
+  this.buildUI()
+}
+Comment.prototype = Object.create(HTMLElement.prototype)
+Comment.prototype.constructor = Comment 
+Comment.prototype.buildUI = function() { }
+HTMLElement.register('x-comment', Comment)
+ 
+Webcomponents are hard to write from scratch. When writing more custom components use library like polymer
+ 
+import { PolymerElement } from '@polymer/polymer/polymer-element.js';
+export class PolymerWordCount extends PolymerElement{}
+<dom-module><template><style></style><script></script></template></dom-module>
+ 
+Design patterns:
+ 
+1) Creational : singleton, prototype, builder, factory
+2) Structural : facade, proxy
+3) Behavioral : iterator, observer, mediator, state
+ 
+ 
+SETS:
+If order does not matter and you only need unique values.
+Simplifies data access (finding and deleting) compared to arrays.
+ 
+const ids = new Set();
+ids.add(13);
+ids.add(16);
+for (const id of ids){
+console.log(id)
+}
+ids.has(13); // true
+ids.delete(13)
+ 
+---------------------------------------------------------------------------
+var obj1 = {"a":3,"b":4,"c":5}
+var obj2 = {"x":5,"y":2,"z":6}
+ 
+expected result:
+{ ax: 15, by: 8, cz: 30 }
+ 
+var arr1 = Object.entries(obj1)
+var arr2 = Object.entries(obj2)
+var result = arr1.reduce((a,[key1,val1],i)=>{
+  const [key2,val2] = arr2[i]
+  return {...a,[`${key1}${key2}`]:val1*val2}
+},{})
+console.log(result)
+ 
+-------------------------------------------------------------------------
+function x( arr ) {
+return arr.reduce((a, b) => a.length <= b.length ? b : a)
+}
+x(["vikram","maiya","ram"])
+Expected result: vikram // longest string
+ 
+ 
+// Write a function that takes two strings (a and b) as arguments
+// Beginning at the end of 'a', insert 'b' after every 3rd character of 'a'
+// Return the resulting string
+// myFunction('1234567','.') Expected '1.234.567'
+ 
+function myFunction(a, b) {
+   let result = [];
+   let rest = a;
+   while (rest.length) {
+   	result.push(rest.slice(-3));
+   	rest = rest.slice(0, -3);
+   }
+   return result.reverse().join(b);
+}
+ 
+--------------------------------------------------------------------------------
+ 
+// Write a function that takes an object as argument containing properties with personal information
+// Extract firstName, lastName, size, and weight if available
+// If size or weight is given transform the value to a string
+// Attach the unit cm to the size
+// Attach the unit kg to the weight
+// Return a new object with all available properties that we are interested in
+function myFunction(obj){
+return {
+fn:obj.fn,
+ln:obj.ln,
+...(obj.size && {size:`${obj.size}cm`}),
+...(obj.weight && {weight:`${obj.weight}kg`})
+}
+}
+myFunction({fn: 'Lisa', ln: 'Müller', age: 17, size: 175, weight: 67})
+Expected
+{fn: 'Lisa', ln: 'Müller'
+ 
+ 
+The main reason Redux is using immutability is that it doesn't have to traverse an object tree to check for the changes in every key value. 
+Instead, it will only check the object's reference is changed or not in order to notify components about on state change.
+ 
+ 
+------------------------------------------------------
+ 
+var store = {
+      person: {
+        name: "vikram",
+        age: 28
+      }
+    }
+ 
+ 
+const SET_NAME = 'SET_NAME';
+ 
+function personReducer (state, action) {
+    switch (action.type) {
+        case SET_NAMESET_NAME:
+            var newState = {...state, name: action.name };
+            return newState;
+        }
+    }
+ 
+function combineReducer (store, action) {
+    switch (action.type) {
+        case SET_NAME:
+            return Object.assign(
+                {}, 
+                {person: personReducer(store.person, action)}
+            );
+    }
+}
+ 
+------------------------------------------
+let arr = [
+  [1,2],
+  [3,4],
+  [5,6,[7,8]],
+  3
+]
+ 
+function flat(arr,depth=1) {
+  let result = [];
+  arr.forEach((item)=>{
+    if(Array.isArray(item) && depth>0){
+      result.push(...flat(item,depth-1))
+    } else{
+      result.push(item);
+    }
+  })
+  return result;
+}
+console.log(flat(arr,2))
+---------------------------------------------
+function addOne(arg){
+  return arg + 1;
+}
+function addTwo(arg){
+  return arg + 2;
+}
+function mulTwo(arg){
+  return arg * 2;
+}
+ 
+ 
+function pipe(...functions){
+  return (arg)=>{
+     return functions.reduce((arg,fun)=>{
+      const result = fun(arg);
+       return result;
+  },arg); 
+  }
+}
+ 
+const evaluate = pipe(addOne,addTwo,mulTwo)
+console.log(evaluate(5))
+ 
+---------------------------------------------
+Implement promise.all
+function callMe() {
+  return new Promise((resolve,reject)=>{
+  setTimeout(()=>{
+    resolve("hi");
+  },1000);
+  });
+}
+function All(promises){
+  let result = []
+  let completed = 0;
+  return new Promise((resolve,reject)=>{
+    promises.forEach((promise,index)=>{
+        promise.then((res)=>{
+          if(res)result[index] = res
+          completed++
+          if(promises.length===completed){
+            resolve(result)
+          }
+        }).catch(()=>{
+          reject()
+        })
+    });
+  });
+}
+ 
+All([callMe(),callMe(),Promise.resolve("test"),Promise.resolve("test")]).then((res)=>{
+  console.log("Success",res)
+}).catch(()=>{
+  console.log("Failure")
+})
+------------------------------------------------
+ 
+    <input onchange="handleonchange()"/>
+    <script>
+        const debounce=(cb,delay)=>{
+            let timer = null;
+            return (...arg)=>{
+                if(timer){
+                    clearTimeout(timer)
+                }
+                timer = setTimeout(()=>{
+                    cb(...arg);
+                },delay)
+            }
+        }
+        const handleonchange = (e)=>{
+            console.log("Hi")
+        }
+ 
+        const debounceonchange = debounce(handleonchange,1)
+    </script>
+---------------------------------------------------------
+center the div
+    <style>
+        div{
+            background-color: red;
+            height: 400px;
+            width: 400px;
+ 
+        }
+        body{
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100vh;
+        }
+    </style>
+--------------------------------------------------------
+Check panagram:
+const str = "1abcdlkmkefghijklamnopqustkuvsrkwxyzns"
+function checkPanagram(str){
+  str = str.toUpperCase()
+  let alphabets = new Array(26).fill(false);
+  for(let i=0; i<str.length; i++){
+    if(str[i]>="A" && str[i]<="Z"){
+      const index = str.charCodeAt(i) - "A".charCodeAt(0)
+      alphabets[index] = true
+    }
+ 
+ 
+  }
+  console.log(alphabets)
+  return alphabets.every((al)=>al)
+}
+console.log(checkPanagram(str))
+-------------------------------------------------------------
+ 
+const convert12to24 = (time12) => {
+  let [time,modifier] = time12.split(" ");
+  let [hours,min] = time.split(":")
+  if(hours === "12") {
+    hours = "00";
+  }
+  if(modifier === "PM") {
+    hours = parseInt(hours) + 12;
+  }
+  return `${hours}:${min}`
+}
+console.log(convert12to24("01:02 PM"))
+ 
+-------------------------------------------------------------
+class LRU {
+  constructor(max=5){
+    this.max = max;
+    this.cache = new Map();
+  }
+  set(key,value){
+    if(this.cache.has(key))this.cache.delete(key)
+    if(this.cache.size === this.max){
+      this.cache.delete(this.leastRecentlyUsed())
+    }
+    this.cache.set(key,value);
+  }
+  get(key){
+    const val = this.cache.get(key)
+    this.cache.delete(key)
+    this.set(key,val)
+  }
+  leastRecentlyUsed(){
+    return this.cache.keys().next().value;
+  }
+}
+var a = new LRU(5);
+ 
+a.set('name','vikram')
+a.set('age','29')
+a.get('name')
+console.log(a.cache)
+---------------------------------------------------------
+Advertisement
+Ad
+
+Add Comment
+Please, Sign In to add comment
+Advertisement
+Ad
+
+Public Pastes
+للتواصل معي
+HTML | 23 min ago | 0.21 KB
+Outlook доступ к календарям для других
+PowerShell | 24 min ago | 0.21 KB
+UVa 612
+C++ | 28 min ago | 0.87 KB
+Untitled
+Python | 42 min ago | 3.43 KB
+Scala3 UByte
+Scala | 48 min ago | 2.00 KB
+BTC Wallet Credentials have been reset
+GetText | 58 min ago | 0.24 KB
+paste test
+C | 1 hour ago | 0.07 KB
+paste test
+C | 1 hour ago | 0.07 KB
+Advertisement
+
+create new paste  /  syntax languages  /  archive  /  faq  /  tools  /  night mode  /  api  /  scraping api  /  news  /  pro
+privacy statement  /  cookies policy  /  terms of serviceupdated  /  security disclosure  /  dmca  /  report abuse  /  contact
+
+By using Pastebin.com you agree to our cookies policy to enhance your experience.
+Site design & logo © 2023 Pastebin
+We use cookies for various purposes including analytics. By continuing to use Pastebin, you agree to our use of cookies as described in the Cookies Policy.  OK, I Understand
+Not a member of Pastebin yet?
+Sign Up, it unlocks many cool features! 
+
+Electric Car Prices Might Surprise You (Search Here)
+
+Electric Cars | Search Ads

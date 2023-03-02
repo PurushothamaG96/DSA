@@ -1,0 +1,87 @@
+Continue
+    What is does
+    Syntax
+    Control Flow 
+Given a list of ages of applicants, determine how many of those applicants are eligible for a Voter ID.
+Applicants greater than 18 years of age are eigible to get voter IDs.
+Input
+<size of the list - n>
+<n lines, containing 1 integer each, which is the age of each applicant>
+Output
+<1 line containing 1 integer, which the number of eligible applicants> 
+Problem Solving Steps
+1. Understand the problem statement - 
+2. Come up with new Test Cases -
+3. Come up with the Logic
+4. Convert algo into code
+5. Dry Run
+6. Execution
+Test Cases
+1. 
+Input
+3
+11
+12
+11
+Output: 0
+2.
+Input
+3
+18
+18
+18
+Output: 0
+3.
+Input
+3
+12
+47
+32
+Output: 2
+Logic
+1. Read the number of applications. 
+2. Maintain a count of eligible applications. Initialize it to 0.
+3. Read the first unread applicant age, and compare it to 18. 
+4. If the age is greater than 18, increase the count of eligible applications by 1.
+5. If not greater, continue to the next application.
+6. Repeat steps 3 - 5 for all applications.
+12 
+45 
+32 - 
+67
+98
+2000
+34
+10 -
+7
+eligibleCount = 0 +1 = 1 + 1 = 2 ==> 6
+Continue
+What? 
+Allows you to skip the remaining part of the iteration and go back to the beginning of the current loop.
+for ( ; ; ) {
+    ...
+    ....
+    ...
+    ...
+}
+for ( ; ; ) {
+    ...
+    ...
+    ...
+    continue
+    ....
+    ...
+    ....
+}
+while () {
+    ...
+    ...
+    ...
+}
+while () {
+    ...
+    ...
+    continue;
+    ...
+    ...
+}

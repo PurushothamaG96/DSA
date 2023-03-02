@@ -1,0 +1,15 @@
+t = int(input())
+for i in range(t):
+	s = input()
+	arr = [-1]*256
+	
+	res = 0
+	
+	left = 0
+	for right in range(len(s)):
+		curr = s[right]
+		left = max(left,arr[ord(curr)]+1)
+		res = max(res,right-left+1)
+		arr[ord(curr)] = right
+		
+	print(res)

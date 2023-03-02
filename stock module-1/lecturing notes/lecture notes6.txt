@@ -1,0 +1,89 @@
+Topics to be covered
+While Loop
+    - Syntax
+    - Execution
+Question:
+Chillkart is a now online shopping website and wants to build an IVRS. The IVRS has the following options. 
+1 - KnOW the details of the recent order 
+2 - Know about today's discount offer 
+3 - KnOW the balance in your account 
+0 - Exit 
+Chillkart has the data of various callers. for each call, Chillkart wants to count how many times each option was chosen. 
+Input: Each line contains 1 integer denoting the customer's choice. Stop processing when 0 is encountered. 
+Output: 3 lines containing one integer each. 
+First line should contain the total number of times the customer chose option 1. 
+Second line should contain the total number of times the customer chose option 2. 
+Third line should contain the total weber of times the customer chose option 3. 
+sample: 
+Input: 
+2
+3
+0
+Expected output: 
+0
+1
+1
+Problem Solving Steps
+1. Understand the problem statement -
+2. Come up with new Test Cases - 
+3. Come up with the Logic
+4. Convert algo into code
+5. Dry Run
+6. Execution
+Test Cases
+1. 
+Input:
+1
+2
+3
+1
+2
+0
+Output:
+2
+2
+1
+2.
+Input
+1
+0
+Output:
+1
+0
+0
+3. 
+Input
+0
+Output:
+0
+0
+0
+count1 = 0+1 = 1+1 = 2
+count2 = 0+1 = 1+1 = 2
+count3 = 0+1 = 1
+1
+2
+3
+1
+2
+0
+2
+2
+1
+Logic:
+1. Maintain 3 counts - 1 for each input_number.count1, count2, count3. Initialize  to 0.
+2. Read the first unread input of customer.
+3. If the input is 0, print the 3 counts and end.
+4. If the input is 1, increment count1.
+5. If the input is 2, increment count2.
+6. If the input is 3, increment count3.
+7. Repeat steps 2 through 6 for all inputs.
+While loop
+Syntax
+while(<condition>) {
+    ...
+    ...
+    <loop body>
+    ..
+    ..    
+}

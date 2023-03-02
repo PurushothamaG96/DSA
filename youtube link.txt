@@ -1,0 +1,144 @@
+PASTEBIN
+API
+TOOLS
+FAQ
+paste
+Search...
+
+LOGIN SIGN UP
+Advertisement
+SHARE
+TWEET
+Guest User
+Untitled
+A GUEST
+JAN 16TH, 2023
+16
+0
+NEVER
+ADD COMMENT
+Not a member of Pastebin yet? Sign Up, it unlocks many cool features!
+ 3.15 KB | None |  
+     
+I have compiled below steps for mastering the fullstack in 2 months. I want the student to follow the below steps :
+ 
+Step 1: Please complete the below 3 playlists.
+ 
+These 3 playlist will teach you Js Basics, intermidiate and advance concepts:
+ 
+1) https://www.youtube.com/watch?v=s6R0VEdoVt4&list=PLqq-6Pq4lTTYFJxC9NLJ7dSTI5Z1WWB6K
+ 
+2) https://www.youtube.com/watch?v=O312eN5J2bc&list=PLqq-6Pq4lTTZ_LyvzfrndUOkIvOF4y-_c
+ 
+3) https://www.youtube.com/watch?v=fBpPfPjxOhc&list=PLqq-6Pq4lTTaflXUL0v3TSm86nodn0c_u
+ 
+Step 2: (Watch this one hour video for learning Object Oriented concepts in Js)
+https://www.youtube.com/watch?v=PFmuCDHHpwk
+ 
+Step 3: (This one hour video will teach you Es6)
+https://www.youtube.com/watch?v=NCwa_xi0Uuc
+ 
+Step 4: (This 30 min video will help you learn DOM manipulations using pure Js)
+https://www.youtube.com/watch?v=zPHerhks2Vg&t=209s
+ 
+Step 5: (Watch the below videos to prepare for interviews)
+ 
+What is event loop ?
+overview:
+https://www.youtube.com/watch?v=EI7sN1dDwcY&feature=youtu.be
+Indepth:
+https://www.youtube.com/watch?v=IvLltoCt8QU&feature=youtu.be
+ 
+Advanced Javascript for Interviews :
+ 
+learn typecoercian:
+https://www.freecodecamp.org/news/js-type-coercion-explained-27ba3d9a2839/
+ 
+learn async await,promises,callback:
+https://www.youtube.com/watch?v=n5ZtTO1ArWg
+ 
+learn other concepts:
+https://www.youtube.com/watch?v=zE9iro4r918
+https://www.youtube.com/watch?v=XskMWBXNbp0
+https://www.youtube.com/watch?v=Nt-qa_LlUH0
+https://www.youtube.com/watch?v=ZxpdR_C7RVA
+https://www.youtube.com/watch?v=MiKdRJc4ooE
+https://www.youtube.com/watch?v=qJWALEoGge4&t=152s
+https://www.youtube.com/watch?v=7HolHe7Gqbw
+ 
+Step 6: The below 2 videos are introduction to NodeJS basics:
+1) https://www.youtube.com/watch?v=hQd4TCGB_nE&list=PLqq-6Pq4lTTa-d0iZg41U2RDqECol9C5B
+2) https://www.youtube.com/watch?v=pKd0Rpw7O48&t=2s
+ 
+Step 7: ( Learn ReactJS ):
+ 
+Basics react:
+https://www.youtube.com/watch?v=Ke90Tje7VS0
+Virtual DOM (30 min video):
+https://www.youtube.com/watch?v=i793Qm6kv3U&t=426s
+Error boundaries:
+https://reactjs.org/docs/error-boundaries.html
+React.memo vs React.callbacks:
+https://kentcdodds.com/blog/usememo-and-usecallback
+ 
+Step 8: ( Learn Redux ):
+https://www.youtube.com/watch?v=poQXNp9ItL4&t=3975s
+Redux for class based components:
+https://www.youtube.com/watch?v=qq1OO3m7hAE&t=1774s
+ 
+ 
+Step 9 (Learn css framework material UI ): 
+https://www.youtube.com/watch?v=0KEpWHtG10M&list=PL4cUxeGkcC9gjxLvV4VEkZ6H6H4yWuS58
+https://www.youtube.com/watch?v=Xoz31I1FuiY&t=1895s
+ 
+Follow the below steps to master the nodejs :
+ 
+Step :1 ( getting started )
+https://youtube.com/playlist?list=PLqq-6Pq4lTTa-d0iZg41U2RDqECol9C5B
+ 
+ 
+Step2: ( overview of node js)
+https://youtube.com/playlist?list=PL4cUxeGkcC9gcy9lrvMJ75z9maRw4byYp
+ 
+Step 3: ( learn rest api and crud operations with Mongo db)
+https://youtube.com/playlist?list=PL4cUxeGkcC9jsz4LDYc6kv3ymONOKxwBU
+ 
+Step4: ( learn jwt )
+https://youtube.com/playlist?list=PL4cUxeGkcC9iqqESP8335DA5cRFp8loyp
+ 
+Step 5: ( learn websockets with nodjs)
+https://youtube.com/playlist?list=PL4cUxeGkcC9i4V-_ZVwLmOusj8YAUhj_9
+ 
+Step 6 (Learn webrtc):
+https://www.youtube.com/watch?v=DvlyzDZDEq4
+Advertisement
+Add Comment
+Please, Sign In to add comment
+Advertisement
+Public Pastes
+Untitled
+Python | 13 min ago | 3.43 KB
+Scala3 UByte
+Scala | 19 min ago | 2.00 KB
+BTC Wallet Credentials have been reset
+GetText | 29 min ago | 0.24 KB
+paste test
+C | 31 min ago | 0.07 KB
+paste test
+C | 34 min ago | 0.07 KB
+paste test
+C | 34 min ago | 0.07 KB
+paste test
+C | 34 min ago | 0.07 KB
+paste test
+C | 34 min ago | 0.07 KB
+Advertisement
+
+create new paste  /  syntax languages  /  archive  /  faq  /  tools  /  night mode  /  api  /  scraping api  /  news  /  pro
+privacy statement  /  cookies policy  /  terms of serviceupdated  /  security disclosure  /  dmca  /  report abuse  /  contact
+
+By using Pastebin.com you agree to our cookies policy to enhance your experience.
+Site design & logo © 2023 Pastebin
+We use cookies for various purposes including analytics. By continuing to use Pastebin, you agree to our use of cookies as described in the Cookies Policy.  OK, I Understand
+Not a member of Pastebin yet?
+Sign Up, it unlocks many cool features! 
